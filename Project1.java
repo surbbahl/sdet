@@ -1,5 +1,3 @@
-import static org.testng.Assert.assertEquals;
-
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -15,15 +13,30 @@ import org.testng.annotations.Test;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.*;
-public class Project_3 {
+public class Project1 {
 	@Test
 	public void calc() throws InterruptedException,IOException
 	{ 
 		WebDriverWait wait;
 		DesiredCapabilities cap=new DesiredCapabilities();
 		DesiredCapabilities cap1=new DesiredCapabilities();
-		AppiumDriver<MobileElement> driver=null;
-		cap1.setCapability("devicename", "Pixel 4_surbhi");
+		/*cap.setCapability("devicename", "Pixel 4_surbhi");
+		cap.setCapability("platformName", "Android");
+        cap.setCapability("appPackage", "com.google.android.apps.tasks");
+        cap.setCapability("appActivity", "com.google.android.apps.tasks.ui.TaskListsActivity");
+        //cap.setCapability("appWaitPackage", "package.android");
+        //cap.setCapability("appWaitActivity", "com.google.android.apps.tasks.ui.taskListsActivity");
+        //cap.setCapability("appWaitDuration", 10000);
+        cap.setCapability("noReset", true);*/
+        AppiumDriver<MobileElement> driver=null;
+       // driver=new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), cap);
+        //driver.manage().timeouts().implicitlyWait(10000,TimeUnit.SECONDS);
+        //wait = new WebDriverWait(driver, 10);
+        /*driver.manage().timeouts().implicitlyWait(1000,TimeUnit.SECONDS);
+        driver.findElementById("tasks_fab").click();
+        driver.findElementById("add_task_title").sendKeys("Surbhi");
+        driver.findElementById("add_task_done").click();*/
+        cap1.setCapability("devicename", "Pixel 4_surbhi");
 		cap1.setCapability("platformName", "Android");
         cap1.setCapability("appPackage", "com.google.android.keep");
         cap1.setCapability("appActivity", "com.google.android.keep.activities.BrowseActivity");
@@ -37,13 +50,23 @@ public class Project_3 {
         System.out.println(st);
         //driver.findElementByXPath("//androidx.cardview.widget.CardView[@content-desc=\". \"])[1]/android.widget.LinearLayout/android.widget.LinearLayout").sendKeys("Surbhi");
         driver.findElementById("edit_note_text").sendKeys("BAhl");
-        driver.findElementByXPath("//android.widget.TextView[@content-desc='Single-column view']").click();
-        driver.findElementByXPath("//hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.LinearLayout[2]/android.widget.TextView").click();
-        driver.findElementByXPath("//android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.Button[2]").click();
-        driver.findElementByXPath("//android.widget.ImageButton[@content-desc='Open navigation drawer']").click();
-        String st1 =driver.findElementByXPath("//android.widget.LinearLayout/android.widget.LinearLayout/android.view.ViewGroup/android.widget.LinearLayout/android.widget.TextView").getText();
-        System.out.println(st1);
-        assertEquals(st,"Tomorrow, 8:00 AM");
+        
+       
+        
+        
+       
+        
+        
+	}
+
 }
-	
-}
+
+
+
+
+
+
+
+
+
+
